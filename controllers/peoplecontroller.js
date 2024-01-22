@@ -7,6 +7,7 @@ const People = require("../models/people");
 
 
 
+
 //index route try catch block get all people
 router.get("/people", async (req, res) => {
   try {
