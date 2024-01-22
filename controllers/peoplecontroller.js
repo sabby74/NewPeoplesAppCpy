@@ -29,6 +29,8 @@ router.post("/people", async (req, res) => {
   }
 });
 
+
+
 //update route try catch block
 
 router.put("/people/:id", async (req, res) => {
