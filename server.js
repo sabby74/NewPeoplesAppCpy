@@ -9,7 +9,7 @@ const app = express();
 // import mongoose
 const mongoose = require("./db/connection");
 
-const People = require("./models/people");
+const People = require("./models/people.js");
 const morgan = require("morgan");
 const peopleController = require("./controllers/peoplecontroller");
 
