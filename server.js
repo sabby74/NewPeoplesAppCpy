@@ -16,7 +16,7 @@ app.use("/", peopleController);
 // Routes
 
 app.get("/", (req, res) => {
-  res.send("<h1>Hello World From Peoples App Copy</h1>");
+  res.send("<h1>Hello there, From Peoples App Copy </h1>");
 });
 
 app.listen(PORT, () => {
