@@ -4,10 +4,6 @@ const router = express.Router();
 
 const People = require("../models/people");
 
-
-
-
-
 //index route try catch block get all people
 router.get("/people", async (req, res) => {
   try {
@@ -29,22 +25,20 @@ router.post("/people", async (req, res) => {
   }
 });
 
-
-
 //update route try catch block
 
 router.put("/people/:id", async (req, res) => {
-    try {
-        const updatePeople = await People.findByIdAndUpdate(
-        req.params.id,
-        req.body,
-        { new: true }
-        );
-        res.status(200).json(updatePeople);
-    } catch (error) {
-        res.status(400).json(error);
-    }
-    });
+  try {
+    const updatePeople = await People.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+    res.status(200).json(updatePeople);
+  } catch (error) {
+    res.status(400).json(error);
+  }
+});
 
 //delete route try catch block
 router.delete("/people/:id", async (req, res) => {
