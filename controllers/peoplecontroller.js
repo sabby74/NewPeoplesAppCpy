@@ -2,7 +2,8 @@ const express = require("express");
 
 const router = express.Router();
 
-const People = require("../models/people");
+const People = require("../models/People");
+
 
 //index route try catch block get all people
 router.get("/people", async (req, res) => {
