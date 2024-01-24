@@ -4,12 +4,15 @@ const app = express();
 const PORT = process.env.PORT;
 const peopleController = require("./controllers/peoplecontroller");
 const morgan = require("morgan");
+const cors = require("cors");
 
 
 
 //middleware
 app.use(morgan("tiny"));
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(cors());
 
 app.use("/", peopleController);
 
